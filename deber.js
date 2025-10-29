@@ -84,10 +84,10 @@ function inicial(empleado) {
     }
     console.log(`Las iniciales son ${iniciales}`)
 }
-    function cinco() {
-        const empleado = { cargo: "Director General Académico" }
+function cinco() {
+    const empleado = { cargo: "Director General Académico" }
     inicial(empleado)
-    }
+}
 
 
 //BLOQUE 2 
@@ -161,6 +161,41 @@ function cargos() {
     for (let c = 0; c < empleados.length; c++) {
         let nombres = empleados[c]
         inicial(nombres)
+    }
+
+}
+//BLOQUE 3 
+function promedio() {
+    const empleados = [
+        { nombre: "Ana", nota: 65 },
+        { nombre: "Luis", nota: 80 },
+        { nombre: "Carla", nota: 90 },
+        { nombre: "José", nota: 50 },
+        { nombre: "Marta", nota: 75 }
+    ]
+    let cv = 0;
+    let suma = 0
+    for (let c = 0; c < empleados.length; c++) {
+        const nota = empleados[c].nota
+        if (nota >= 70) {
+            cv++
+            suma += nota
+        }
+    }
+    const promedio = (suma / cv)
+    console.log(`Promedios de notas >=70 es:${promedio}`)
+}
+function edadEquivocada() {
+    const empleados = [
+        { nombre: "Ana", edad: 22 },
+        { nombre: "Luis", edad: -5 },
+        { nombre: "Carla", edad: 0 }
+    ]
+    for(let c=0;c<empleados.length;c++){
+        let nombre=empleados[c].nombre
+        if(nombre<=0  ){
+            
+        }
     }
 
 }
