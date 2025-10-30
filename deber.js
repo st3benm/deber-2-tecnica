@@ -229,7 +229,7 @@ function separacion(empleados) {
     console.log(`Promedio de menores:${promedioMenor}`)         //Y PRESENTAMOS 
     console.log(`Promedio de mayores:${promedioMayor}`)
 }
-function TRECES(){                          //PALINDROMA
+function TRECES() {                          //PALINDROMA
     const empleados = [
         { nombre: "Ana", edad: 17 },
         { nombre: "Luis", edad: 20 },
@@ -279,8 +279,8 @@ function pares(empleados) {
     console.log(`Promedio de Pares:${promedioPares}`)
     console.log(`Promedio de Impares:${promedioImpares}`)
 }
-function CUATROSS(){                //palindroma
-     const empleados = [
+function CUATROSS() {                //palindroma
+    const empleados = [
         { nombre: "Ana", salario: 450 },
         { nombre: "Luis", salario: 500 },
         { nombre: "Carla", salario: 625 },
