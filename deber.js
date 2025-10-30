@@ -191,11 +191,87 @@ function edadEquivocada() {
         { nombre: "Luis", edad: -5 },
         { nombre: "Carla", edad: 0 }
     ]
-    for(let c=0;c<empleados.length;c++){
-        let nombre=empleados[c].nombre
-        if(nombre<=0  ){
-            
+    let cv = 0;
+    for (let c = 0; c < empleados.length; c++) {
+        let edad = empleados[c].edad
+        if (edad <= 0) {
+            cv++
+
         }
     }
+    console.log(`Edades invalidas ${cv}`)
+}
+function separacion() {
+    const empleados = [
+        { nombre: "Ana", edad: 17 },
+        { nombre: "Luis", edad: 20 },
+        { nombre: "Carla", edad: 35 },
+        { nombre: "José", edad: 15 },
+        { nombre: "Marta", edad: 18 }
+    ]
+    let cv = 0;
+    let cb = 0;
+    let suma = 0;
+    let sumo = 0;
+    for (let c = 0; c < empleados.length; c++) {
+        edad = empleados[c].edad
+        if (edad < 18) {
+            cv++
+            suma += edad
 
+        } else if (edad >= 18) {
+            cb++
+            sumo += edad
+
+        }
+    }
+    let promedioMenor = (suma / cv)
+    let promedioMayor = (sumo / cv)
+    console.log(`Promedio de menores:${promedioMenor}`)
+    console.log(`Promedio de mayores:${promedioMayor}`)
+
+}
+function multiplicar() {
+    const empleado = { nombre: "Luis", salario: 300 }
+        return empleado.salario
+
+    }
+
+function multiplicarDos() {
+    let numero = multiplicar();
+    for (let c = 1; c <= 10; c++) {
+        console.log(`${c}*${numero}=${c * numero}`);
+
+    }
+
+}
+function pares(){
+    const empleados = [
+    {nombre: "Ana", salario: 450},
+    {nombre: "Luis", salario: 500},
+    {nombre: "Carla", salario: 625},
+    {nombre: "José", salario: 800},
+    {nombre: "Marta", salario: 705}
+]
+let cv=0;
+let cb=0;
+let suma=0;
+let sumo=0;
+for(let c=0;c<empleados.length;c++){
+    let salario=empleados[c].salario
+
+if(salario%2===0){
+    cv++
+    suma+=salario
+
+}else if(!salario%2===0){
+    cb++
+    sumo+=salario
+}
+
+}
+let promedioPares=(suma/cv)
+let promedioImpares=(sumo/cb)
+console.log(`Promedio de Pares:${promedioPares}`)
+console.log(`Promedio de Impares:${promedioImpares}`)
 }
