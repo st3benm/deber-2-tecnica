@@ -225,7 +225,7 @@ function separacion(empleados) {
         }
     }
     let promedioMenor = (suma / cv)         //SACAMOS LOS PROMEDIOS 
-    let promedioMayor = (sumo / cv)
+    let promedioMayor = (sumo / cb)
     console.log(`Promedio de menores:${promedioMenor}`)         //Y PRESENTAMOS 
     console.log(`Promedio de mayores:${promedioMayor}`)
 }
