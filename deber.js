@@ -172,13 +172,13 @@ function promedio(empleados) {
         const nota = empleados[c].nota                  //RECORREMOS EL OBJETO 
         if (nota >= 70) {
             cv++
-            suma += nota
-        }
+            suma += nota            //CONDICIONAL PARA VER SI ES MAYOR A 70
+        }           //PONEMOS EL CONTADOR Y PONEMOS LOS VALORES EN UNA NUEVA VARIABLE
     }
-    const promedio = (suma / cv)
-    console.log(`Promedios de notas >=70 es:${promedio}`)
+    const promedio = (suma / cv)            //CALCULAMOS EL PROMEDIO 
+    console.log(`Promedios de notas >=70 es:${promedio}`)           //PRESENTAMOS LA RESPUESTA
 }
-function UNOS() {
+function UNOS() {                   //PALINDROMA
     const empleados = [
         { nombre: "Ana", nota: 65 },
         { nombre: "Luis", nota: 80 },
@@ -186,50 +186,50 @@ function UNOS() {
         { nombre: "José", nota: 50 },
         { nombre: "Marta", nota: 75 }
     ]
-    promedio(empleados)
+    promedio(empleados)         //ENLAZAMOS  NUESTRA FUNCION
 }
 function edadEquivocada(empleados) {
     let cv = 0;
-    for (let c = 0; c < empleados.length; c++) {
-        let edad = empleados[c].edad
+    for (let c = 0; c < empleados.length; c++) {    //CREAMOS UN FOR PARA RECORRER EL ARREGLO 
+        let edad = empleados[c].edad            //SACAMOS LA EDAD Y COMPARAMOS TENEMOS UN CONTADOR AFUERA 
         if (edad <= 0) {
             cv++
 
         }
     }
-    console.log(`Edades invalidas ${cv}`)
+    console.log(`Edades invalidas ${cv}`)       //PRESENTAMOS
 }
-function DOCES() {
+function DOCES() {                      //PALINDROMA
     const empleados = [
         { nombre: "Ana", edad: 22 },
         { nombre: "Luis", edad: -5 },
         { nombre: "Carla", edad: 0 }
     ]
-    edadEquivocada(empleados)
+    edadEquivocada(empleados)           //ENLAZADO 
 }
 function separacion(empleados) {
     let cv = 0;
     let cb = 0;
-    let suma = 0;
+    let suma = 0;               //CREAMOS DOS CONTADORES PORQUQ QUEREMOS SACAR DOS PROMEDIOS 
     let sumo = 0;
-    for (let c = 0; c < empleados.length; c++) {
-        edad = empleados[c].edad
-        if (edad < 18) {
+    for (let c = 0; c < empleados.length; c++) {            //RECORREMOS EL OBJETO
+        edad = empleados[c].edad                //EXTRAEMOS LA EDAD
+        if (edad < 18) {            //COMPARAMOS Y SI CUMPLE LE AGG AL CONTADOR
             cv++
-            suma += edad
+            suma += edad                //Y PONEMOS LOS VALORES EN LA VARIABLE 
 
-        } else if (edad >= 18) {
+        } else if (edad >= 18) {            //AQUI LO MISMO 
             cb++
             sumo += edad
 
         }
     }
-    let promedioMenor = (suma / cv)
+    let promedioMenor = (suma / cv)         //SACAMOS LOS PROMEDIOS 
     let promedioMayor = (sumo / cv)
-    console.log(`Promedio de menores:${promedioMenor}`)
+    console.log(`Promedio de menores:${promedioMenor}`)         //Y PRESENTAMOS 
     console.log(`Promedio de mayores:${promedioMayor}`)
 }
-function TRECES(){
+function TRECES(){                          //PALINDROMA
     const empleados = [
         { nombre: "Ana", edad: 17 },
         { nombre: "Luis", edad: 20 },
@@ -237,35 +237,35 @@ function TRECES(){
         { nombre: "José", edad: 15 },
         { nombre: "Marta", edad: 18 }
     ]
-    separacion(empleados)
+    separacion(empleados)           //ENLAZAMOS 
 
 
 }
 
 function multiplicar() {
-    const empleado = { nombre: "Luis", salario: 300 }
+    const empleado = { nombre: "Luis", salario: 300 }   //PONEMOS EN RETURN EL SALARIO 
     return empleado.salario
 
 }
 
 function multiplicarDos() {
-    let numero = multiplicar();
-    for (let c = 1; c <= 10; c++) {
-        console.log(`${c}*${numero}=${c * numero}`);
+    let numero = multiplicar();         //UTILIZAMOS EL RETURN 
+    for (let c = 1; c <= 10; c++) {     //Y PONEMOS NUESTRA  TABLA DE MULTIPLICAR 
+        console.log(`${c}*${numero}=${c * numero}`);    //PRESENTAMOS 
 
     }
 
 }
 function pares(empleados) {
-    let cv = 0;
-    let cb = 0;
+    let cv = 0;         //CREAMOS DOS CONTADORES 
+    let cb = 0;                     //Y DOS VARIABLES PARA GUARDAR PROXIMOS RESULTADOS 
     let suma = 0;
     let sumo = 0;
-    for (let c = 0; c < empleados.length; c++) {
+    for (let c = 0; c < empleados.length; c++) {        //RECOOREMOS EL FOR Y SACAMOS EL SALARIO 
         let salario = empleados[c].salario
 
-        if (salario % 2 === 0) {
-            cv++
+        if (salario % 2 === 0) {            //PONEMOS UNA CONDICONAL PARA SABER SI ES PAR E IMPAR Y LOS QUE SON SE PONEN EN EL CONTADOR 
+            cv++                            //Y EN LA VARIABLE NUEVA 
             suma += salario
 
         } else if (!salario % 2 === 0) {
@@ -275,11 +275,11 @@ function pares(empleados) {
 
     }
     let promedioPares = (suma / cv)
-    let promedioImpares = (sumo / cb)
+    let promedioImpares = (sumo / cb)           //SACAMOS PROMEDIOS  Y PRESENTAMOS 
     console.log(`Promedio de Pares:${promedioPares}`)
     console.log(`Promedio de Impares:${promedioImpares}`)
 }
-function CUATROSS(){
+function CUATROSS(){                //palindroma
      const empleados = [
         { nombre: "Ana", salario: 450 },
         { nombre: "Luis", salario: 500 },
@@ -287,5 +287,5 @@ function CUATROSS(){
         { nombre: "José", salario: 800 },
         { nombre: "Marta", salario: 705 }
     ]
-    pares(empleados)
+    pares(empleados)        //ENLAZAMOS 
 }
